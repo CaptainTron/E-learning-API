@@ -4,7 +4,7 @@ const users = DBConfig.users
 const courses = DBConfig.courses
 const sequelize = DBConfig.sequelize
 
-
+const { sendmail } = require('../email')
 
 // This Function Will Register user 
 const Register_course = async (req, res) => {
@@ -27,6 +27,8 @@ const Register_course = async (req, res) => {
             res.status(400).json({ message: "Invalid Request", status: "This User Does not Exist" });
             return;
         }
+
+        console.log(sendmail('vaibhavwateam@gmail.com', "Hiill")) 
 
         let new_user = await course_registered.create({ ...req.body })
         res.status(201).json({ status: "Successful", new_user })
