@@ -11,11 +11,11 @@ app.use(express.json());
 // app.use('/v1', serviceworder)
 
 
-const router = require('./Router/coursesRouter.js') 
+const router = require('./Router/course_router.js') 
 app.use('/v1', router);
 
 
-const user = require('./Router/UserRouter.js') 
+const user = require('./Router/user_router.js') 
 app.use('/v1', user);
 
 

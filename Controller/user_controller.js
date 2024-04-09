@@ -4,7 +4,7 @@ const users = DBConfig.users
 
 
 // This Function Will Register user 
-const Register_newCustomer = async (req, res) => {
+const register_user = async (req, res) => {
     try {
         const { email, first_name, last_name, phone_number } = req.body
         if (!email || !first_name || !last_name || !phone_number) {
@@ -22,6 +22,7 @@ const Register_newCustomer = async (req, res) => {
     }
 }
 
+// view user
 const view_user = async (req, res) => {
     try {
         const { phone_number } = req.params
@@ -29,8 +30,8 @@ const view_user = async (req, res) => {
             res.status(400).json({ message: "Invalid Request", status: "Missing Required Parameters" })
             return;
         }
-        let new_user = await users.findOne({ phone_number })
-        res.status(200).json({ status: "Successful", new_user })
+        let user = await users.findOne({ phone_number })
+        res.status(200).json({ status: "Successful", user })
     } catch (err) {
         if (err.name === 'SequelizeUniqueConstraintError') {
             res.status(400).json({ message: "Phone Number Already taken!", errorType: err.name })
@@ -40,6 +41,7 @@ const view_user = async (req, res) => {
     }
 }
 
+// update_user
 const update_user = async (req, res) => {
     try {
         const { email, first_name, last_name, phone_number } = req.body
@@ -47,8 +49,8 @@ const update_user = async (req, res) => {
             res.status(400).json({ message: "Invalid Request", status: "Missing Required Parameters" })
             return;
         }
-        let Updated_users = await users.update({ email, first_name, last_name }, { where: { phone_number }, returning: true })
-        res.status(201).json({ status: "Successful", Updated_users })
+        let updated_user = await users.update({ email, first_name, last_name }, { where: { phone_number }, returning: true })
+        res.status(201).json({ status: "Successfull", updated_user, mesage: "Phone Number can not be Updated!" })
     } catch (err) {
         if (err.name === 'SequelizeUniqueConstraintError') {
             res.status(400).json({ message: "Phone Number Already taken!", errorType: err.name })
@@ -58,10 +60,9 @@ const update_user = async (req, res) => {
     }
 }
 
-
+``
 module.exports = {
-    Register_newCustomer,
+    register_user,
     view_user,
     update_user,
-
 }

@@ -6,6 +6,23 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             unique: true
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        instructor: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        pre_requisites: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        certification: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: true
+        },
         category: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -27,6 +44,23 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        Ratings: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        tags: {
+            type: DataTypes.ARRAY(DataTypes.STRING), // Define an array of strings for tags
+            allowNull: true,
+            defaultValue: [] // Default value is an empty array
+        }
     });
+
+    Courses.beforeSave((course, options) => {
+        if (course.tags && Array.isArray(course.tags)) {
+            course.tags = course.tags.filter(tag => tag);
+        }
+    });
+
+
     return Courses;
 }
