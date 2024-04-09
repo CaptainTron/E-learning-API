@@ -1,0 +1,951 @@
+{
+	"info": {
+		"_postman_id": "65b0a2ae-f879-46a8-96b1-806a8e48be97",
+		"name": "Projectwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24259607"
+	},
+	"item": [
+		{
+			"name": "Check-Eligibility",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 1,\r\n    \"loan_amount\": 1000000,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/check-eligibility"
+			},
+			"response": [
+				{
+					"name": "Check-Eligibility-False",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"loan_amount\": 1000000,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/check-eligibility"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "135"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"87-RXMDVttwTARg/Y8caqkoSHOaG5o\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:37:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"customer_id\": 2,\n        \"approval\": false,\n        \"interest_rate\": 1,\n        \"corrected_interest_rate\": 1,\n        \"tenure\": 10,\n        \"monthly_installment\": 100458.91\n    }\n}"
+				},
+				{
+					"name": "Check-Eligibility-True",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 2,\r\n    \"loan_amount\": 1000,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/check-eligibility"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "131"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"83-TmpJt5pECCwf2nql9v2dvJ+qJts\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:37:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"customer_id\": 2,\n        \"approval\": true,\n        \"interest_rate\": 1,\n        \"corrected_interest_rate\": 1,\n        \"tenure\": 10,\n        \"monthly_installment\": 100.46\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Vaibhav\",\r\n    \"last_name\": \"Yadav\",\r\n    \"age\": 20,\r\n    \"monthly_income\": 5000,\r\n    \"phone_number\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/register"
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Vaibhav\",\r\n    \"last_name\": \"Yadav\",\r\n    \"age\": 21,\r\n    \"monthly_income\": 5000,\r\n    \"phone_number\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/register"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f7-hAkOWC7DkzuJUUUsBnoA+1DXt04\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:36:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Successful\",\n    \"Customer\": {\n        \"customer_id\": 2,\n        \"first_name\": \"Vaibhav\",\n        \"last_name\": \"Yadav\",\n        \"age\": 21,\n        \"monthly_income\": 5000,\n        \"phone_number\": \"2\",\n        \"approved_limit\": 180000,\n        \"updatedAt\": \"2024-04-05T17:36:49.084Z\",\n        \"createdAt\": \"2024-04-05T17:36:49.084Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 1,\r\n    \"loan_amount\": 1000000,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/create-loan"
+			},
+			"response": [
+				{
+					"name": "Create Loan-Approved",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 1,\r\n    \"loan_amount\": 100,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/create-loan"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "400"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"190-epSdBxLPRd+jutQYHKWu8LJ31pA\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:37:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"amount_paid\": 0,\n        \"loan_completed\": false,\n        \"loan_id\": 9,\n        \"customer_id\": 1,\n        \"monthly_installment\": 10.05,\n        \"tenure\": 10,\n        \"interest_rate\": 1,\n        \"loan_approved\": 100,\n        \"EMIs_paid_on_Time\": 0,\n        \"start_date\": \"2024-05-03T18:30:00.000Z\",\n        \"end_date\": \"2025-05-01T18:30:00.000Z\",\n        \"updatedAt\": \"2024-04-05T17:37:41.597Z\",\n        \"createdAt\": \"2024-04-05T17:37:41.597Z\",\n        \"loanApproved\": true,\n        \"message\": \"Interest Rate, might be changed!\"\n    }\n}"
+				},
+				{
+					"name": "Create Loan-NotApproved",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_id\": 1,\r\n    \"loan_amount\": 10000000,\r\n    \"interest_rate\": 1,\r\n    \"tenure\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/create-loan"
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "125"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7d-CsOM47McGO/TtSNsl/Pkh+wB0wE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:38:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"message\": \"Loan not approved. Customer does not meet eligibility criteria.\",\n        \"loanApproved\": false,\n        \"customer_id\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "View Loan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/view-loan/:loan_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"view-loan",
+						":loan_id"
+					],
+					"variable": [
+						{
+							"key": "loan_id",
+							"value": "7997"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Loan",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/view-loan/:loan_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"view-loan",
+								":loan_id"
+							],
+							"variable": [
+								{
+									"key": "loan_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "442"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ba-J/gz3jtO4rIIAmnePaBo8l/WTlI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:38:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"loan_id\": 9,\n        \"customer_id\": 1,\n        \"EMIs_paid_on_Time\": 0,\n        \"loan_approved\": 100,\n        \"interest_rate\": 1,\n        \"tenure\": 10,\n        \"monthly_installment\": 10.05,\n        \"amount_paid\": 0,\n        \"loan_completed\": false,\n        \"start_date\": \"2024-05-03T18:30:00.000Z\",\n        \"end_date\": \"2025-05-01T18:30:00.000Z\",\n        \"createdAt\": \"2024-04-05T17:37:41.597Z\",\n        \"updatedAt\": \"2024-04-05T17:37:41.597Z\",\n        \"customerDetails\": {\n            \"first_name\": \"Vaibhav\",\n            \"last_name\": \"Yadav\",\n            \"age\": 20,\n            \"phone_number\": \"1\",\n            \"customer_id\": 1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Make_Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/make-payment/:customer_id/:loan_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"make-payment",
+						":customer_id",
+						":loan_id"
+					],
+					"variable": [
+						{
+							"key": "customer_id",
+							"value": "8"
+						},
+						{
+							"key": "loan_id",
+							"value": "32"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Make_Payment-Completed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_amount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/make-payment/:customer_id/:loan_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"make-payment",
+								":customer_id",
+								":loan_id"
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "1"
+								},
+								{
+									"key": "loan_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-WZ63qF9wyLI7nj/G4SJZeo08dNM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:38:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"remaining_amount\": 0,\n    \"isCompleted\": true\n}"
+				},
+				{
+					"name": "Make_Payment_Pay",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment_amount\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/make-payment/:customer_id/:loan_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"make-payment",
+								":customer_id",
+								":loan_id"
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "1"
+								},
+								{
+									"key": "loan_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-C5NIDbx4ARCZ8jgFXnCW5jlWt58\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:39:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"remaining_amount\": 4900,\n    \"isCompleted\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "View Statements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/view-statement/:customer_id/:loan_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"view-statement",
+						":customer_id",
+						":loan_id"
+					],
+					"variable": [
+						{
+							"key": "customer_id",
+							"value": "244"
+						},
+						{
+							"key": "loan_id",
+							"value": "7997"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Statements_Completed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/view-statement/:customer_id/:loan_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"view-statement",
+								":customer_id",
+								":loan_id"
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "1"
+								},
+								{
+									"key": "loan_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a2-gCprY8KgI5h5tOyZCTP+8tQXPMk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:39:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 1,\n    \"loan_id\": 9,\n    \"interest_rate\": 1,\n    \"amount_paid\": 100,\n    \"monthly_installment\": 10.05,\n    \"repayments_left\": 0,\n    \"loan_completed\": true,\n    \"status\": \"Loan Completed!\"\n}"
+				},
+				{
+					"name": "View Statements_Pending",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/view-statement/:customer_id/:loan_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"view-statement",
+								":customer_id",
+								":loan_id"
+							],
+							"variable": [
+								{
+									"key": "customer_id",
+									"value": "1"
+								},
+								{
+									"key": "loan_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a2-lQcf2/qXIVkmlkGcWGCtzzR1WLw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:40:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 1,\n    \"loan_id\": 8,\n    \"interest_rate\": 1,\n    \"amount_paid\": 100,\n    \"monthly_installment\": 502.29,\n    \"repayments_left\": 9,\n    \"loan_completed\": false,\n    \"status\": \"Loan Pending!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Ingest Loans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/21vai/OneDrive/Documents/Note-Taking-API/data/loan_data.json"
+					}
+				},
+				"url": "http://localhost:5000/api/ingest-loans"
+			},
+			"response": [
+				{
+					"name": "Ingest Loans_POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/21vai/OneDrive/Documents/Note-Taking-API/data/loan_data.json"
+							}
+						},
+						"url": "http://localhost:5000/api/ingest-loans"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5b-vF0c7fZ4Du6mxzrW6vwuQiAuA+w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:40:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"fetching from existing loans data\",\n    \"message\": \"loan_data Successfully Injected!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Ingest Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/21vai/OneDrive/Documents/Note-Taking-API/data/customer_data.json"
+					}
+				},
+				"url": "http://localhost:5000/api/ingest-customer"
+			},
+			"response": [
+				{
+					"name": "Ingest Customer_request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/21vai/OneDrive/Documents/Note-Taking-API/data/customer_data.json"
+							}
+						},
+						"url": "http://localhost:5000/api/ingest-customer"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"63-KYxC8bUqMB2TN0c7+rSf9sFYH1Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Apr 2024 17:40:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"customer_data Successfully Pushed :)\",\n    \"status\": \"fetching from Request:) customer data\"\n}"
+				}
+			]
+		}
+	]
+}
