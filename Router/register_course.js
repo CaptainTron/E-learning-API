@@ -1,12 +1,12 @@
 const router = require('express').Router()
 
 
-const { CreateCourses, get_Courses, delete_course, update_course } = require('../Controller/CourseController.js')
+const { Register_course, get_registered_courses } = require('../Controller/register_course.js')
 
-router.post('/createcourses', CreateCourses)
-router.get('/course/:name', get_Courses)
-router.delete('/delete-course/:name', delete_course)
-router.patch('/update-course/:name', update_course)
+router.post('/register-course', Register_course)
+router.get('/view-registered-course', get_registered_courses)
+// router.delete('/delete-course/:name', delete_course)
+// router.patch('/update-course/:name', update_course)
 
 
  

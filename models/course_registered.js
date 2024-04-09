@@ -11,6 +11,16 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            unique: 'user_course' // Add unique constraint for user_id and course_id combination
+        },
+        course_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            unique: 'user_course' // Add unique constraint for user_id and course_id combination
+        }
     });
 
     course_registered.belongsTo(sequelize.models.courses, { foreignKey: 'course_id' }); // Assuming Course is the name of your Course schema

@@ -15,8 +15,12 @@ const router = require('./Router/coursesRouter.js')
 app.use('/v1', router);
 
 
-// const router = require('./Router/UserRouter.js') 
-// app.use('/v1', router);
+const user = require('./Router/UserRouter.js') 
+app.use('/v1', user);
+
+
+const register_course = require('./Router/register_course.js') 
+app.use('/v1', register_course);
 
 const PORT = 5000;
 const StartServer = async () => {
