@@ -1,0 +1,6 @@
+::1 - - [09/Apr/2024:17:56:11 +0000] "GET /v1/view-registered-course?user_id=1 HTTP/1.1" 201 770 "-" "PostmanRuntime/7.37.3"
+::1 - - [09/Apr/2024:17:56:30 +0000] "GET /v1/view-registered-course?user_id=1 HTTP/1.1" 201 770 "-" "PostmanRuntime/7.37.3"
+::1 - - [09/Apr/2024:17:56:32 +0000] "POST /v1/register-course HTTP/1.1" 400 85 "-" "PostmanRuntime/7.37.3"
+::1 - - [09/Apr/2024:17:56:36 +0000] "POST /v1/register-course HTTP/1.1" 400 85 "-" "PostmanRuntime/7.37.3"
+::1 - - [09/Apr/2024:17:57:42 +0000] "POST /v1/register-course HTTP/1.1" 400 85 "-" "PostmanRuntime/7.37.3"
+::1 - - [09/Apr/2024:17:57:51 +0000] "GET /v1/view-registered-course?user_id=1 HTTP/1.1" 201 770 "-" "PostmanRuntime/7.37.3"

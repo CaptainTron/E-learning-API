@@ -5,11 +5,17 @@ app.use(cors());
 require('dotenv').config();
 app.use(express.json());
 
-// This one for Service Workers
-// Service Worker to Inject Data directly to database 
-// const serviceworder = require("./Courses.js/serviceWorker_Router.js")
-// app.use('/v1', serviceworder)
+const morgan = require('morgan');
+const fs = require('fs');
+const path = require('path');
+const logger = require('./logger');
 
+
+// Create a stream object with a 'write' function that will be used by morgan
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs', 'access.log'), { flags: 'a' });
+
+// Setup morgan middleware to log HTTP requests
+app.use(morgan('combined', { stream: accessLogStream }));
 
 const router = require('./Router/course_router.js') 
 app.use('/v1', router);
@@ -18,7 +24,7 @@ app.use('/v1', router);
 const user = require('./Router/user_router.js') 
 app.use('/v1', user);
 
-
+ 
 const register_course = require('./Router/register_course.js') 
 app.use('/v1', register_course);
 

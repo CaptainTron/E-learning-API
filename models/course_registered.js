@@ -14,17 +14,17 @@ module.exports = (sequelize, DataTypes) => {
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            unique: 'user_course' // Add unique constraint for user_id and course_id combination
+            unique: 'user_course'
         },
         course_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            unique: 'user_course' // Add unique constraint for user_id and course_id combination
+            unique: 'user_course'
         }
     });
 
-    course_registered.belongsTo(sequelize.models.courses, { foreignKey: 'course_id' }); // Assuming Course is the name of your Course schema
-    course_registered.belongsTo(sequelize.models.users, { foreignKey: 'user_id' }); // Assuming Course is the name of your Course schema
+    course_registered.belongsTo(sequelize.models.courses, { foreignKey: 'course_id' }); 
+    course_registered.belongsTo(sequelize.models.users, { foreignKey: 'user_id' }); 
 
     return course_registered;
 }

@@ -33,9 +33,6 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-// dataAlready present!
-// db.Customer = require("../models/customer_info.js")(sequelize, DataTypes); 
-// db.Customer_loans = require("../models/Customer_loan.js")(sequelize, DataTypes);
 
 db.users = require("../models/users.js")(sequelize, DataTypes);
 db.courses = require("../models/courses.js")(sequelize, DataTypes);

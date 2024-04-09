@@ -49,6 +49,13 @@ const update_user = async (req, res) => {
             res.status(400).json({ message: "Invalid Request", status: "Missing Required Parameters" })
             return;
         }
+
+        const existing = await users.findOne({ where: { phone_number } });
+        if (!existing) {
+            res.status(400).json({ message: "Invalid Request", status: "This User Does not Exist" });
+            return;
+        }
+
         let updated_user = await users.update({ email, first_name, last_name }, { where: { phone_number }, returning: true })
         res.status(201).json({ status: "Successfull", updated_user, mesage: "Phone Number can not be Updated!" })
     } catch (err) {
@@ -60,7 +67,8 @@ const update_user = async (req, res) => {
     }
 }
 
-``
+
+
 module.exports = {
     register_user,
     view_user,
