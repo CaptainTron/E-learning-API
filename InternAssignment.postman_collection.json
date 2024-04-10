@@ -1,0 +1,1212 @@
+{
+	"info": {
+		"_postman_id": "f94079d1-75b3-4eac-9caa-245056da4472",
+		"name": "InternAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24259607"
+	},
+	"item": [
+		{
+			"name": "Superuser",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdXBlcl9pZCI6MSwiZW1haWwiOiJhc2RmYXNmZmZmQGdtYWlsLmNvbSIsImlhdCI6MTcxMjc0NTk4NywiZXhwIjoxNzEzMTc3OTg3fQ.sXT2rmM__NYapWCtJHWLlaT9yFyJGzfIwdEPcDUedoo"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Web-D\",\r\n    \"level\": \"advance\",\r\n    \"price\": 900,\r\n    \"name\": \"2odejby vaibhav sir only\",\r\n    \"description\": \"This is testing\",\r\n    \"instructor\": \"Vaibhav Yadav\",\r\n    \"pre_requisites\": \"javascript\",\r\n    \"certification\": true,\r\n    \"Ratings\": \"10/10\",\r\n    \"duration\": 2,\r\n    \"tags\": [\"webd\", \"Golang\", \"nodejs\", \"Python\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/createcourses"
+					},
+					"response": [
+						{
+							"name": "Create Course",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\": \"Web-D\",\r\n    \"level\": \"advance\",\r\n    \"price\": 900,\r\n    \"name\": \"2odejby vaibhav sir only\",\r\n    \"description\": \"This is testing\",\r\n    \"instructor\": \"Vaibhav Yadav\",\r\n    \"pre_requisites\": \"javascript\",\r\n    \"certification\": true,\r\n    \"Ratings\": \"10/10\",\r\n    \"duration\": 2,\r\n    \"tags\": [\"webd\", \"Golang\", \"nodejs\", \"Python\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/createcourses"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13d-RKb51VZQ3vMbnkbB9w3d3A4wql8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:47:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"course\": {\n        \"course_id\": 6,\n        \"category\": \"Web-D\",\n        \"level\": \"advance\",\n        \"price\": 900,\n        \"name\": \"2odejby vaibhav sir only\",\n        \"description\": \"This is testing\",\n        \"instructor\": \"Vaibhav Yadav\",\n        \"pre_requisites\": \"javascript\",\n        \"certification\": true,\n        \"Ratings\": \"10/10\",\n        \"duration\": 2,\n        \"tags\": [\n            \"webd\",\n            \"Golang\",\n            \"nodejs\",\n            \"Python\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"asdfasffff@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"re_password\": \"123\",\r\n    \"last_name\": \"Yadav\",\r\n    \"first_name\": \"Vaibhav\",\r\n    \"phone_number\": 121212121\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/admin/createaccount"
+					},
+					"response": [
+						{
+							"name": "SuperUser",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"asdfasffff@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"re_password\": \"123\",\r\n    \"last_name\": \"Yadav\",\r\n    \"first_name\": \"Vaibhav\",\r\n    \"phone_number\": \"9e834u\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/admin/createaccount"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-iudSjugM6MtNmXLc1sCcKV/a358\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:38:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfull\",\n    \"new_superuser\": {\n        \"email\": \"asdfasffff@gmail.com\"\n    },\n    \"mesage\": \"Phone Number can not be Changed!\"\n}"
+						},
+						{
+							"name": "CreateAccount",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"asdfasffff@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"re_password\": \"123\",\r\n    \"last_name\": \"Yadav\",\r\n    \"first_name\": \"Vaibhav\",\r\n    \"phone_number\": 121212121\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/admin/createaccount"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-n89N9Gkd0YZC7G3tZstq8PG5jkk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:43:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfull\",\n    \"new_superuser\": {\n        \"email\": \"asdfasffff@gmail.com\",\n        \"super_id\": 1,\n        \"first_name\": \"Vaibhav\",\n        \"last_name\": \"Yadav\",\n        \"phone_number\": 121212121\n    },\n    \"mesage\": \"Phone Number can not be Changed!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"asdfasffff@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/admin/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"asdfasffff@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/admin/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-T1A4Q2nyVeSr9Zh/rmhKjZbieiU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:46:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"You've successfully Signed In!\",\n    \"TOKEN\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdXBlcl9pZCI6MSwiZW1haWwiOiJhc2RmYXNmZmZmQGdtYWlsLmNvbSIsImlhdCI6MTcxMjc0NTk2OSwiZXhwIjoxNzEzMTc3OTY5fQ.FlFzGxhltHqsbY-Jj9xyKXWQ-EYi9re1xB4jm33lnY8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdXBlcl9pZCI6MSwiZW1haWwiOiJhc2RmYXNmZmZmQGdtYWlsLmNvbSIsImlhdCI6MTcxMjc0NTk4NywiZXhwIjoxNzEzMTc3OTg3fQ.sXT2rmM__NYapWCtJHWLlaT9yFyJGzfIwdEPcDUedoo"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category\": \"Web-D\",\r\n    \"level\": \"advance\",\r\n    \"price\": 900,\r\n    \"description\": \"This is testing\",\r\n    \"instructor\": \"Vaibhav Yadav\",\r\n    \"pre_requisites\": \"javascript\",\r\n    \"certification\": true,\r\n    \"Ratings\": \"3/10\",\r\n    \"duration\": 2,\r\n    \"tags\": [\"webd\", \"Golang\", \"nodejs\", \"Python\", \"Javascript\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/v1/update-course/:coursesId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"update-course",
+								":coursesId"
+							],
+							"variable": [
+								{
+									"key": "coursesId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Course",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\": \"Web-D\",\r\n    \"level\": \"advance\",\r\n    \"price\": 900,\r\n    \"description\": \"This is testing\",\r\n    \"instructor\": \"Vaibhav Yadav\",\r\n    \"pre_requisites\": \"javascript\",\r\n    \"certification\": true,\r\n    \"Ratings\": \"3/10\",\r\n    \"duration\": 2,\r\n    \"tags\": [\"webd\", \"Golang\", \"nodejs\", \"Python\", \"Javascript\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/v1/update-course/:coursesId",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"update-course",
+										":coursesId"
+									],
+									"variable": [
+										{
+											"key": "coursesId",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-UAudU6Jv7xDyrAymHaqiy70g0/w\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:50:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfull\",\n    \"updated_course\": [\n        1,\n        [\n            {\n                \"course_id\": 6,\n                \"description\": \"This is testing\",\n                \"instructor\": \"Vaibhav Yadav\",\n                \"pre_requisites\": \"javascript\",\n                \"certification\": true,\n                \"category\": \"Web-D\",\n                \"level\": \"advance\",\n                \"price\": 900,\n                \"name\": \"2odejby vaibhav sir only\",\n                \"duration\": 2,\n                \"Ratings\": \"3/10\",\n                \"tags\": [\n                    \"webd\",\n                    \"Golang\",\n                    \"nodejs\",\n                    \"Python\",\n                    \"Javascript\"\n                ]\n            }\n        ]\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZW1haWwiOiIyOTcyMTIyMjIxIiwiaWF0IjoxNzEyNzQxNTEyLCJleHAiOjE3MTMxNzM1MTJ9.q2mkaxMhhgVmT3rluZg3HhZhqy7s3OueuHXWc0eUtUk"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/v1/delete-course/:name/:course_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"delete-course",
+								":name",
+								":course_id"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "2odejby vaibhav sir only"
+								},
+								{
+									"key": "course_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete course",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/v1/delete-course/:name/:course_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"delete-course",
+										":name",
+										":course_id"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "3",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "name",
+											"value": "2odejby vaibhav sir only"
+										},
+										{
+											"key": "course_id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-1nn2EOyg3pC1vSwS1M/OzwThZn8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:51:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfully Deleted\",\n    \"Updated_course\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User_register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Vaibhav\",\r\n    \"last_name\": \"yadav\",\r\n    \"email\": \"tro21n2221vhav@gmail.com\",\r\n    \"phone_number\": 91171279,\r\n    \"password\": \"123\",\r\n    \"re_password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/user/createaccount"
+					},
+					"response": [
+						{
+							"name": "User_register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Vaibhav\",\r\n    \"last_name\": \"yadav\",\r\n    \"email\": \"tro21n2221vhav@gmail.com\",\r\n    \"phone_number\": 91171279,\r\n    \"password\": \"123\",\r\n    \"re_password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/user/createaccount"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-ySvcZNNQnewaiB+jy3LCg/MgUdk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:54:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfull\",\n    \"newUser\": {\n        \"user_id\": 2,\n        \"first_name\": \"Vaibhav\",\n        \"last_name\": \"yadav\",\n        \"phone_number\": 91171279,\n        \"email\": \"tro21n2221vhav@gmail.com\"\n    },\n    \"mesage\": \"email can not be Changed!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InRybzJuMjF2YWliMmhhdkBnbWFpbC5jb20iLCJmaXJzdF9uYW1lIjoiVmFpYmhhdiIsImlhdCI6MTcxMjc0MjU1NywiZXhwIjoxNzEzMTc0NTU3fQ.Ia7MXZTgFPjQRIrehas81UcK6FL9idk09pD0KjhJTnU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/register-course"
+					},
+					"response": [
+						{
+							"name": "Register Course",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"course_id\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/register-course"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "138"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8a-SaKhyQXFxcPXgKWtl2ctpQxfXzU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:59:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"new_registration\": {\n        \"registered_on\": \"2024-04-10T10:59:21.202Z\",\n        \"course_registered_id\": 1,\n        \"user_id\": 1,\n        \"course_id\": 7\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User_view",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InRybzJuMjF2YWliMmhhdkBnbWFpbC5jb20iLCJmaXJzdF9uYW1lIjoiVmFpYmhhdiIsImlhdCI6MTcxMjc0MjU1NywiZXhwIjoxNzEzMTc0NTU3fQ.Ia7MXZTgFPjQRIrehas81UcK6FL9idk09pD0KjhJTnU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/v1/user-view"
+					},
+					"response": [
+						{
+							"name": "User_view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:5000/v1/user-view"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-8PJG95gEGcSPXftBiPSyrPP4GCo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:56:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"user\": {\n        \"user_id\": 2,\n        \"first_name\": \"Vaibhav\",\n        \"last_name\": \"yadav\",\n        \"phone_number\": 91171279,\n        \"email\": \"tro21n2221vhav@gmail.com\",\n        \"password\": \"$2a$10$.MPkMk.QNpJGu5WJBWwiH.nIIdfXi9aKI1B/POtZ3DZ6ls64TFqyy\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "View Registered Courses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InRybzJuMjF2YWliMmhhdkBnbWFpbC5jb20iLCJmaXJzdF9uYW1lIjoiVmFpYmhhdiIsImlhdCI6MTcxMjc0MjU1NywiZXhwIjoxNzEzMTc0NTU3fQ.Ia7MXZTgFPjQRIrehas81UcK6FL9idk09pD0KjhJTnU"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/v1/view-registered-course?limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"view-registered-course"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View Registered Courses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/v1/view-registered-course?limit=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"v1",
+										"view-registered-course"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "425"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a9-L3AzcnxUr0fLbuhTx+ZGy7F85QY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:59:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"courses\": [\n        {\n            \"course_registered_id\": 1,\n            \"registered_on\": \"2024-04-10T10:59:21.202Z\",\n            \"user_id\": 1,\n            \"course_id\": 7,\n            \"course\": {\n                \"course_id\": 7,\n                \"description\": \"This is testing\",\n                \"instructor\": \"Vaibhav Yadav\",\n                \"pre_requisites\": \"javascript\",\n                \"certification\": true,\n                \"category\": \"Web-D\",\n                \"level\": \"advance\",\n                \"price\": 900,\n                \"name\": \"2odejby vaibhav sir only\",\n                \"duration\": 2,\n                \"Ratings\": \"10/10\",\n                \"tags\": [\n                    \"webd\",\n                    \"Golang\",\n                    \"nodejs\",\n                    \"Python\"\n                ]\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InRybzJuMjF2YWliMmhhdkBnbWFpbC5jb20iLCJmaXJzdF9uYW1lIjoiVmFpYmhhdiIsImlhdCI6MTcxMjc0MjU1NywiZXhwIjoxNzEzMTc0NTU3fQ.Ia7MXZTgFPjQRIrehas81UcK6FL9idk09pD0KjhJTnU"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Vaibhav G\",\r\n    \"last_name\":\"yadav\",\r\n    \"email\":\"tron21vaibhav@gmail.com\",\r\n    \"phone_number\": \"+ssfasdf\",\r\n    \"password\": \"2323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/update-user"
+					},
+					"response": [
+						{
+							"name": "Update_User",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Vaibhav G\",\r\n    \"last_name\":\"yadav\",\r\n    \"email\":\"tron21vaibhav@gmail.com\",\r\n    \"phone_number\": 23232323,\r\n    \"password\": \"2323\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/update-user"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ExpiresIn",
+									"value": "undefined"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-pnF8SMUzCI8QgjRLIlKL0d6sOZk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:58:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successfull\",\n    \"updated_user\": [\n        1,\n        [\n            {\n                \"user_id\": 1,\n                \"first_name\": \"Vaibhav G\",\n                \"last_name\": \"yadav\",\n                \"phone_number\": 23232323,\n                \"email\": \"tron21vaibhav@gmail.com\",\n                \"password\": \"$2a$10$21zR29XdovKQPpLxXDPJcuWqIupRPNi7yMa7WrjMa6h3CrquIijoi\"\n            }\n        ]\n    ],\n    \"mesage\": \"Phone Number can not be Updated!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"tro21n2221vhav@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/v1/user/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tro21n2221vhav@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/v1/user/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-66ZfZH6EHAB7hnWvvM7WdWscHw4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Apr 2024 10:56:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Successful\",\n    \"message\": \"You've successfully Signed In!\",\n    \"TOKEN\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6InRybzIxbjIyMjF2aGF2QGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJWYWliaGF2IiwiaWF0IjoxNzEyNzQ2NTc4LCJleHAiOjE3MTMxNzg1Nzh9.oJi2h0bvUAaDfrNBMAwPd3Kccx5dwc8LBLox8rGCHBk\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/view/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"view",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "NODEJS",
+							"disabled": true
+						},
+						{
+							"key": "level",
+							"value": "advance",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "duration",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "Web-D",
+							"disabled": true
+						},
+						{
+							"key": "minPrice",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "maxPrice",
+							"value": "500",
+							"disabled": true
+						},
+						{
+							"key": "instructor",
+							"value": "Shivang Singh",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get course",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/v1/view/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"v1",
+								"view",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "NODEJS",
+									"disabled": true
+								},
+								{
+									"key": "level",
+									"value": "advance",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "duration",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Web-D",
+									"disabled": true
+								},
+								{
+									"key": "minPrice",
+									"value": "100",
+									"disabled": true
+								},
+								{
+									"key": "maxPrice",
+									"value": "500",
+									"disabled": true
+								},
+								{
+									"key": "instructor",
+									"value": "Shivang Singh",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1188"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a4-6jyN+wK6b4i5fc7CymJy3lIclmA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 10 Apr 2024 10:51:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Successfull\",\n    \"courses_list\": [\n        {\n            \"course_id\": 1,\n            \"description\": \"This is testing\",\n            \"instructor\": \"Vaibhav Yadav\",\n            \"pre_requisites\": \"javascript\",\n            \"certification\": true,\n            \"category\": \"Web-D\",\n            \"level\": \"advance\",\n            \"price\": 900,\n            \"name\": \"nodejs-by vaibhav sir only\",\n            \"duration\": 2,\n            \"Ratings\": \"10/10\",\n            \"tags\": [\n                \"webd\",\n                \"Golang\",\n                \"nodejs\",\n                \"Python\"\n            ]\n        },\n        {\n            \"course_id\": 2,\n            \"description\": \"This is testing\",\n            \"instructor\": \"Vaibhav Yadav\",\n            \"pre_requisites\": \"javascript\",\n            \"certification\": true,\n            \"category\": \"Web-D\",\n            \"level\": \"advance\",\n            \"price\": 100,\n            \"name\": \"nodejs-d by vaibhav sir only\",\n            \"duration\": 2,\n            \"Ratings\": \"10/10\",\n            \"tags\": [\n                \"webd\",\n                \"Golang\",\n                \"nodejs\",\n                \"Python\"\n            ]\n        },\n        {\n            \"course_id\": 3,\n            \"description\": \"This is testing\",\n            \"instructor\": \"Vaibhav Yadav\",\n            \"pre_requisites\": \"javascript\",\n            \"certification\": true,\n            \"category\": \"Web-D\",\n            \"level\": \"advance\",\n            \"price\": 100,\n            \"name\": \"nodejsby vaibhav sir only\",\n            \"duration\": 2,\n            \"Ratings\": \"10/10\",\n            \"tags\": [\n                \"webd\",\n                \"Golang\",\n                \"nodejs\",\n                \"Python\"\n            ]\n        },\n        {\n            \"course_id\": 4,\n            \"description\": \"This is testing\",\n            \"instructor\": \"Vaibhav Yadav\",\n            \"pre_requisites\": \"javascript\",\n            \"certification\": true,\n            \"category\": \"Web-D\",\n            \"level\": \"advance\",\n            \"price\": 100,\n            \"name\": \"nodejby vaibhav sir only\",\n            \"duration\": 2,\n            \"Ratings\": \"10/10\",\n            \"tags\": [\n                \"webd\",\n                \"Golang\",\n                \"nodejs\",\n                \"Python\"\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
