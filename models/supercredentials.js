@@ -1,9 +1,11 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
+
 
 module.exports = (sequelize, DataTypes) => {
-    const Credentials = sequelize.define('user', {
-        user_id: {
+    const Credentials = sequelize.define('superCredentials', {
+        super_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
@@ -14,19 +16,18 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         last_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.STRING, 
+            allowNull: false, 
         },
-        phone_number: {
+        phone_number: { 
             type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true,
             validate: {
                 len: [0, 10], // Limit the length of the phone number to a minimum of 1 and a maximum of 10 characters
                 isNumeric: true, // Ensure that the phone number consists only of numeric characters
             },
         },
-        email: {
+        email: { 
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
@@ -48,8 +49,7 @@ module.exports = (sequelize, DataTypes) => {
 
     // Create the JWT token
     Credentials.prototype.createJWT = function () {
-        console.log(this.user_id)
-        return jwt.sign({ user_id: this.user_id, email: this.email, first_name: this.first_name }, 'vaibhavvai', { expiresIn: '5d' });
+        return jwt.sign({ super_id: this.super_id, email: this.email }, process.env.JWT_SECRET_KEY, { expiresIn: process.env.EXPIRESIN });
     };
 
     // Compare passwords

@@ -21,10 +21,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             unique: 'user_course'
         }
-    });
+    }); 
 
     course_registered.belongsTo(sequelize.models.courses, { foreignKey: 'course_id' }); 
-    course_registered.belongsTo(sequelize.models.users, { foreignKey: 'user_id' }); 
+    course_registered.belongsTo(sequelize.models.user, { foreignKey: 'user_id' }); 
 
     return course_registered;
 }
+ 

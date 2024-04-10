@@ -34,9 +34,15 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-db.users = require("../models/users.js")(sequelize, DataTypes);
+// db.users = require("../models/users.js")(sequelize, DataTypes);
+
+
 db.courses = require("../models/courses.js")(sequelize, DataTypes);
+db.users = require("../models/users.js")(sequelize, DataTypes);
 db.course_registered = require("../models/course_registered.js")(sequelize, DataTypes);
+db.superCredentials = require("../models/supercredentials.js")(sequelize, DataTypes);
+
+
 
 db.sequelize.sync({ force: false })
     .then(() => console.log("Re-Sync Successful"))

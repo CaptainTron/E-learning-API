@@ -1,7 +1,7 @@
 {
-  "name": "Credit System",
+  "name": "Ed-tech backend",
   "version": "1.0.0",
-  "description": "Credit System",
+  "description": "Ed-tech backend",
   "main": "server.js",
   "scripts": {
     "test": "jest",
